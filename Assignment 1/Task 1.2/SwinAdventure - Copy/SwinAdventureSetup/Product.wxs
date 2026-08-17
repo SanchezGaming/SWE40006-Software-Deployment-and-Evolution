@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="SwinAdventure Setup" Language="1033" Version="1.0.0.0" Manufacturer="104415488 - Santiago Bencich" UpgradeCode="9674A07F-6317-4F1D-B990-FFFF55895A2B">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+		
+		<MediaTemplate EmbedCab="yes" />
+		
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="SwinAdventure"/>
+			</Directory>
+		</Directory>
+		
+		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="MainExecutable" Guid="FAEABC02-E5D8-4177-A71D-4341559F8C54">
+				<File Id="SwinAdventure.exe" Source="C:\Users\Sanchez\source\repos\SwinAdventure - Copy\SwinAdventure\bin\Release\net10.0\SwinAdventure.exe" KeyPath="yes" />
+			</Component>
+			<Component Id="ProductComponent" Guid="78236022-AF09-4A38-B519-71DD0CAFBDAD">
+				<File Id="SwinAdventure.dll" Source="C:\Users\Sanchez\source\repos\SwinAdventure - Copy\SwinAdventure\bin\Release\net10.0\SwinAdventure.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="ProductComponent2" Guid="9E1F41F3-42DB-4617-8F48-CEC21045A3E4">
+				<File Id="SwinAdventure.deps.json" Source="C:\Users\Sanchez\source\repos\SwinAdventure - Copy\SwinAdventure\bin\Release\net10.0\SwinAdventure.deps.json" KeyPath="yes" />
+			</Component>
+			<Component Id="ProductComponent3" Guid="AFD1CFAE-CB44-4ECC-8E93-C411BB937826">
+				<File Id="SwinAdventure.pdb" Source="C:\Users\Sanchez\source\repos\SwinAdventure - Copy\SwinAdventure\bin\Release\net10.0\SwinAdventure.pdb" KeyPath="yes" />
+			</Component>
+			<Component Id="ProductComponent4" Guid="467D6D83-98B9-4BBE-A0C0-AE9B516106F5">
+				<File Id="SwinAdventure.runtimeconfig.json" Source="C:\Users\Sanchez\source\repos\SwinAdventure - Copy\SwinAdventure\bin\Release\net10.0\SwinAdventure.runtimeconfig.json" KeyPath="yes" />
+			</Component>
+			<Component Id="ProductComponent5" Guid="537CFC03-6D40-487B-9A55-A26A2618FF9E">
+				<File Id="TestPlayer.txt" Source="C:\Users\Sanchez\source\repos\SwinAdventure - Copy\SwinAdventure\bin\Release\net10.0\TestPlayer.txt" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+
+		<Feature Id="ProductFeature" Title="SwinAdventure" Level="1">
+			<ComponentRef Id="MainExecutable"/>
+			<ComponentRef Id="ProductComponent"/>
+			<ComponentRef Id="ProductComponent2"/>
+			<ComponentRef Id="ProductComponent3"/>
+			<ComponentRef Id="ProductComponent4"/>
+			<ComponentRef Id="ProductComponent5"/>
+		</Feature>
+	</Product>
+</Wix>

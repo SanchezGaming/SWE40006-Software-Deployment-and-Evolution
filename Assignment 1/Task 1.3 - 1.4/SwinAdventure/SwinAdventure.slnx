@@ -1,0 +1,17 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="BagTest/BagTest.csproj" />
+  <Project Path="IdentifiableObject/IdentifiableObject.csproj" Id="14f695c8-d4ff-41fe-a21c-28b892fd72c8" />
+  <Project Path="IdentifiableObjectTest/IdentifiableObjectTest.csproj" />
+  <Project Path="InventoryTest/InventoryTest.csproj" />
+  <Project Path="ItemTest/ItemTest.csproj" />
+  <Project Path="LookCommandTest/LookCommandTest.csproj" />
+  <Project Path="PlayerTest/PlayerTest.csproj" />
+  <Project Path="SwinAdventure/SwinAdventure.csproj" />
+  <Project Path="SwinAdventureSetup/SwinAdventureSetup.wixproj" Type="b7dd6f7e-def8-4e67-b5b7-07ef123db6f0" Id="2cc96772-0e36-4d69-9aca-fec619d80ba5">
+    <Platform Project="x86" />
+  </Project>
+</Solution>
